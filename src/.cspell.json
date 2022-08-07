@@ -1,0 +1,16 @@
+{
+    "ignoreRegExpList": [
+        // cSpell: disable
+        "(?:'(?:\\./Usuario|usuarios?)'|\\.usuario\\)|\\busuarios:)",
+        "(?:'descricao'|\\bdescricao:)"
+        // cSpell: enable
+    ],
+    "words": [
+        "Datagrid",
+        "getTTFB",
+        "UsuarioCreate",
+        "UsuarioEdit",
+        "UsuarioForm",
+        "UsuarioList"
+    ]
+}

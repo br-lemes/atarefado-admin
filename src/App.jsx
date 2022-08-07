@@ -1,12 +1,28 @@
-import * as React from "react";
-import { Admin, Resource, ListGuesser } from 'react-admin';
-import jsonServerProvider from 'ra-data-json-server';
+import { Admin, Resource } from 'react-admin';
+import PersonIcon from '@mui/icons-material/Person';
+import GroupIcon from '@mui/icons-material/Group';
 
-const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
+import dataProvider from './localProvider';
+import { PerfilList, PerfilEdit, PerfilCreate } from './Perfil';
+import { UsuarioList, UsuarioCreate, UsuarioEdit } from './Usuario';
 
-const App = () =>
+const App = () => (
     <Admin dataProvider={dataProvider}>
-        <Resource name="users" list={ListGuesser} />
-    </Admin>;
+        <Resource
+            name='perfis'
+            icon={GroupIcon}
+            list={PerfilList}
+            edit={PerfilEdit}
+            create={PerfilCreate}
+        />
+        <Resource
+            name='usuarios'
+            icon={PersonIcon}
+            list={UsuarioList}
+            edit={UsuarioEdit}
+            create={UsuarioCreate}
+        />
+    </Admin>
+);
 
 export default App;
