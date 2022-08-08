@@ -1,7 +1,8 @@
 {
     "ignoreRegExpList": [
         // cSpell: disable
-        "(?:'(?:\\./Usuario|usuarios?)'|\\.usuario\\)|\\busuarios:)",
+        "(?: usuario(?:s:|[).:])|'usuarios?'|\\(usuario(?:s\\)|[ ).])|\\.usuario(?:s\\.|[ ).]))",
+        "(?:const usuario |'\\./Usuario')",
         "(?:'descricao'|\\bdescricao:)"
         // cSpell: enable
     ],
